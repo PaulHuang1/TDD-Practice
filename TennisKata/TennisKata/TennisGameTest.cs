@@ -5,21 +5,24 @@ namespace TennisKata
     [TestFixture]
     public class TennisGameTest
     {
+        private TennisGame _tennisGame;
+
+        [SetUp]
+        public void @Setup()
+        {
+            _tennisGame = new TennisGame();
+        }
+
         [Test]
         public void A01_LoveAll()
         {
-            var expected = "Love-All";
-            var tennisGame = new TennisGame();
-            var actual = tennisGame.Score();
-            Assert.AreEqual(actual, expected);
+            ScoreShouldBe("Love-All");
         }
-    }
 
-    public class TennisGame
-    {
-        public string Score()
+        private void ScoreShouldBe(string expected)
         {
-            return "Love-All";
+            var actual = _tennisGame.Score();
+            Assert.AreEqual(actual, expected);
         }
     }
 }

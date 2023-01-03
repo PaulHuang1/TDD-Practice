@@ -19,6 +19,13 @@ namespace TennisKata
             ScoreShouldBe("Love-All");
         }
 
+        [Test]
+        public void A02_Fifteen_Love()
+        {
+            _tennisGame.Player1Score();
+            ScoreShouldBe("Fifteen-Love");
+        }
+
         private void ScoreShouldBe(string expected)
         {
             var actual = _tennisGame.Score();

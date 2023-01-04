@@ -5,6 +5,7 @@ namespace TennisKata
     public class TennisGame
     {
         private int _player1ScoreValue;
+        private int _player2ScoreValue;
 
         public void Player1Score()
         {
@@ -21,9 +22,9 @@ namespace TennisKata
                 {3, "Forty"}
             };
 
-            if (_player1ScoreValue > 0)
+            if (_player1ScoreValue > 0 || _player2ScoreValue > 0)
             {
-                return $"{lookup[_player1ScoreValue]}-Love";
+                return $"{lookup[_player1ScoreValue]}-{lookup[_player2ScoreValue]}";
             }
 
             return "Love-All";
@@ -31,7 +32,7 @@ namespace TennisKata
 
         public void Player2Score()
         {
-            throw new System.NotImplementedException();
+            _player2ScoreValue++;
         }
     }
 }

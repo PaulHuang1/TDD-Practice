@@ -47,6 +47,20 @@ namespace TennisKata
             ScoreShouldBe("Love-Fifteen");
         }
 
+        [Test]
+        public void A06_Love_Thirty()
+        {
+            GivenPlayer2Score(2);
+            ScoreShouldBe("Love-Thirty");
+        }
+
+        [Test]
+        public void A07_Love_Forty()
+        {
+            GivenPlayer2Score(3);
+            ScoreShouldBe("Love-Forty");
+        }
+
         private void GivenPlayer2Score(int count)
         {
             for (var i = 0; i < count; i++)

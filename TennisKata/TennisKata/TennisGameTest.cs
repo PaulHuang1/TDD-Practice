@@ -22,16 +22,23 @@ namespace TennisKata
         [Test]
         public void A02_Fifteen_Love()
         {
-            _tennisGame.Player1Score();
+            GivenPlayer1Score(1);
             ScoreShouldBe("Fifteen-Love");
         }
 
         [Test]
         public void A03_Thirty_Love()
         {
-            _tennisGame.Player1Score();
-            _tennisGame.Player1Score();
+            GivenPlayer1Score(2);
             ScoreShouldBe("Thirty-Love");
+        }
+
+        private void GivenPlayer1Score(int count)
+        {
+            for (var i = 0; i < count; i++)
+            {
+                _tennisGame.Player1Score();
+            }
         }
 
         private void ScoreShouldBe(string expected)

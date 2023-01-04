@@ -1,25 +1,31 @@
-﻿namespace TennisKata
+﻿using System.Collections.Generic;
+
+namespace TennisKata
 {
     public class TennisGame
     {
         private int _player1ScoreValue;
 
-        public string Score()
-        {
-            if (_player1ScoreValue == 1)
-            {
-                return "Fifteen-Love";
-            }
-            if (_player1ScoreValue == 2)
-            {
-                return "Thirty-Love";
-            }
-            return "Love-All";
-        }
-
         public void Player1Score()
         {
             _player1ScoreValue++;
+        }
+
+        public string Score()
+        {
+            var lookup = new Dictionary<int, string>
+            {
+                {0, "Love"},
+                {1, "Fifteen"},
+                {2, "Thirty"}
+            };
+
+            if (_player1ScoreValue > 0)
+            {
+                return $"{lookup[_player1ScoreValue]}-Love";
+            }
+
+            return "Love-All";
         }
     }
 }

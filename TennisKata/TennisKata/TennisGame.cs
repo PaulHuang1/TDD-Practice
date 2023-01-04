@@ -17,7 +17,8 @@ namespace TennisKata
             {
                 {0, "Love"},
                 {1, "Fifteen"},
-                {2, "Thirty"}
+                {2, "Thirty"},
+                {3, "Forty"}
             };
 
             if (_player1ScoreValue > 0)

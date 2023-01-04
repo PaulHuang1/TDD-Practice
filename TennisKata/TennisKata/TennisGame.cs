@@ -28,5 +28,10 @@ namespace TennisKata
 
             return "Love-All";
         }
+
+        public void Player2Score()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

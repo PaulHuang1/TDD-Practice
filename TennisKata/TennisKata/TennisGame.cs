@@ -10,7 +10,10 @@
             {
                 return "Fifteen-Love";
             }
-            
+            if (_player1ScoreValue == 2)
+            {
+                return "Thirty-Love";
+            }
             return "Love-All";
         }
 

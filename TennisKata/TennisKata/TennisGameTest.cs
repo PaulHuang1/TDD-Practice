@@ -61,14 +61,6 @@ namespace TennisKata
             ScoreShouldBe("Love-Forty");
         }
 
-        private void GivenPlayer2Score(int count)
-        {
-            for (var i = 0; i < count; i++)
-            {
-                _tennisGame.Player2Score();
-            }
-        }
-
         private void GivenPlayer1Score(int count)
         {
             for (var i = 0; i < count; i++)
@@ -77,6 +69,13 @@ namespace TennisKata
             }
         }
 
+        private void GivenPlayer2Score(int count)
+        {
+            for (var i = 0; i < count; i++)
+            {
+                _tennisGame.Player2Score();
+            }
+        }
         private void ScoreShouldBe(string expected)
         {
             var actual = _tennisGame.Score();

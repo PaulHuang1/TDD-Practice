@@ -12,6 +12,11 @@ namespace TennisKata
             _player1ScoreValue++;
         }
 
+        public void Player2Score()
+        {
+            _player2ScoreValue++;
+        }
+
         public string Score()
         {
             var lookup = new Dictionary<int, string>
@@ -28,11 +33,6 @@ namespace TennisKata
             }
 
             return "Love-All";
-        }
-
-        public void Player2Score()
-        {
-            _player2ScoreValue++;
         }
     }
 }

@@ -61,6 +61,14 @@ namespace TennisKata
             ScoreShouldBe("Love-Forty");
         }
 
+        [Test]
+        public void A08_Fifteen_All()
+        {
+            GivenPlayer1Score(1);
+            GivenPlayer2Score(1);
+            ScoreShouldBe("Fifteen-All");
+        }
+
         private void GivenPlayer1Score(int count)
         {
             for (var i = 0; i < count; i++)

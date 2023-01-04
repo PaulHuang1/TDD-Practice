@@ -27,6 +27,13 @@ namespace TennisKata
                 {3, "Forty"}
             };
 
+            if (_player1ScoreValue == _player2ScoreValue)
+            {
+                if (_player1ScoreValue > 0)
+                {
+                    return $"{lookup[_player1ScoreValue]}-All";
+                }
+            }
             if (_player1ScoreValue > 0 || _player2ScoreValue > 0)
             {
                 return $"{lookup[_player1ScoreValue]}-{lookup[_player2ScoreValue]}";
